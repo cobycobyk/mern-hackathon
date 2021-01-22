@@ -4,12 +4,12 @@ export default function OrderList({orders}) {
   const orderItems = orders.map(order =>
     <OrderListItem
       key={order._id}
-      orders={order}
+      order={order}
     />
   );
   return (
     <main className="OrderList">
-      {orderItems}
+     {orderItems}
     </main>
   );
 }
