@@ -7,11 +7,17 @@ module.exports = {
   setItemQtyInCart,
   checkout,
   getOrders,
+  getOrderDetails,
 };
 
 async function getOrders(req, res) {
   const orders = await Order.find({user: req.user._id});
   res.json(orders);
+}
+
+async function getOrderDetails(req, res) {
+  const order = await Order.findOne({id: req.params.id});
+  res.json(order);
 }
 
 async function cart(req, res) {

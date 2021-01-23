@@ -29,3 +29,7 @@ export function checkout() {
 export function getOrders() {
   return sendRequest(`${BASE_URL}`);
 }
+
+export function getOrderDetails() {
+  return sendRequest(`${BASE_URL}/order-details`);
+}

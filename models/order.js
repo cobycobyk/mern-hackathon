@@ -54,6 +54,14 @@ orderSchema.statics.getCart = async function (userId) {
   );
 };
 
+// orderSchema.statics.getOrder = async function (orderId) {
+//   // 'this' is bound to the model (don't use an arrow function)
+//   // return the promise that resolves to a cart (unpaid order)
+//   return this.findOne(
+//     {id: orderId}
+//   );
+// };
+
 // Instance method for adding an item to a cart (unpaid order)
 orderSchema.methods.addItemToCart = async function (itemId) {
   // this keyword is bound to the cart (order doc)
